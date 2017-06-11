@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
+import { Link } from 'react-router';
 
 // Components
 
@@ -19,22 +19,22 @@ class Nav extends Component {
     return(
       <div className="navigation">
         <div className="navigation-wrapper">
-          <div className="link">
+          <Link to="/schools"><div className="link">
             <img src={school} alt="schools icon" />
             School
-          </div>
-          <div className="link">
+          </div></Link>
+          <Link to="/reviews"><div className="link">
             <img src={review} alt="review icon" />
             Review
-          </div>
-          <div className="link">
+          </div></Link>
+          <Link to="/reports"><div className="link">
             <img src={report} alt="reports icon" />
             Report
-          </div>
-          <div className="link">
+          </div></Link>
+          <Link to="settings"><div className="link">
             <img src={settings} alt="setting icon" />
             Setting
-          </div>
+          </div></Link>
         </div>
       </div>
     )
