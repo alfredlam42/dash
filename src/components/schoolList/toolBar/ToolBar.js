@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 // Components
 
@@ -10,7 +9,6 @@ import './ToolBar.css';
 import getCities from '../../../assets/js/getCities';
 
 // Images
-var review = require('../../../assets/img/edit.png');
 var sort = require('../../../assets/img/sort.png');
 
 class Toolbar extends Component {
@@ -47,7 +45,6 @@ class Toolbar extends Component {
               {this.renderCityOptions()}
             </select>
           </div>
-          <div className="write-review"><Link to="/schools/review"><img src={review} alt="write a review" /></Link></div>
           <div className="filter"><img src={sort} alt="filter or sort results" /></div>
         </div>
       </div>
