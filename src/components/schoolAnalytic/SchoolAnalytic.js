@@ -13,10 +13,12 @@ import './SchoolAnalytic.css';
 
 class SchoolAnalytic extends Component {
   render(){
+    var schoolName = this.props.params.schoolName;
+
     return(
       <div className="analytics">
         <div className="analytics-wrapper">
-          <Title />
+          <Title schoolName={schoolName} />
           <ReportedBy />
           <ReportedCases />
         </div>
