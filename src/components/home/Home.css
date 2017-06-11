@@ -1,0 +1,53 @@
+div.home {
+}
+
+.home div.home-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.home .home-wrapper div.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.home .home-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.home .home-wrapper form div.location {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20%;
+}
+
+.home .home-wrapper form .location select {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid black;
+  margin-left: 6px;
+}
+
+.home .home-wrapper form button.view-school-button {
+  background-color: #3388ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  height: 48px;
+  width: 240px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+}
