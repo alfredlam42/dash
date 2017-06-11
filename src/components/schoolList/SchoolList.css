@@ -3,14 +3,19 @@ div.school-list{
 
 .school-list div.school-list-wrapper {
   height: 100%;
+  background-color: #f6f6f6;
 }
 
 .school-list .school-list-wrapper div.title {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
-  font-size: 36px;
+  height: 60px;
+  background-color: #ffbd8f;
   font-family: Helvetica;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #ffffff;
 }

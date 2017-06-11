@@ -9,6 +9,8 @@ import './SchoolList.css';
 
 // Helpers
 
+// Images
+
 class SchoolList extends Component {
   render(){
     return(

@@ -1,9 +1,6 @@
 div.school {
-  height: 75px;
-}
-
-div.school:not(:last-of-type){
-  border: 1px solid #ffffff;
+  height: 62px;
+  margin: 2px 0;
 }
 
 .school div.school-wrapper {
@@ -11,17 +8,21 @@ div.school:not(:last-of-type){
   flex-direction: row;
   align-items: center;
   height: 100%;
-  background-color: #f6f6f6;
-  padding: 20px;
+  padding: 22px;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 .school .school-wrapper div.school-name {
   flex: 7;
   font-family: Helvetica;
-  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #191919;
 }
 
 .school .school-wrapper div.rating {
   flex: 3;
+  font-size: 20px;
 }

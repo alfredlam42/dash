@@ -13,11 +13,11 @@ class School extends Component {
     var rating = this.props.rating;
 
     for (var i = 0; i < rating; i++){
-      ratings.push(<FontAwesome name="star" />);
+      ratings.push(<FontAwesome style={{color: '#f53b2e'}} name="star" />);
     }
 
     for (var j = 0; j < 5 - rating; j++){
-      ratings.push(<FontAwesome name="star-o" />);
+      ratings.push(<FontAwesome style={{color: '#e6e6eb'}} name="star" />);
     }
 
     return ratings;

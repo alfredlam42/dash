@@ -1,5 +1,6 @@
 div.tool-bar {
-  height: 25px;
+  height: 42px;
+  background-color: #ffffff;
 }
 
 .tool-bar div.tool-bar-wrapper {
@@ -12,11 +13,25 @@ div.tool-bar {
   display: flex;
   height: 100%;
   align-items: center;
-  flex: 1;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
-.tool-bar .tool-bar-wrapper div.selection {
-  font-family: Helvetica;
+.tool-bar .tool-bar-wrapper div.city {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.tool-bar .tool-bar-wrapper .city select {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.tool-bar .tool-bar-wrapper div.write-review,
+.tool-bar .tool-bar-wrapper div.filter {
+  margin: 0 12px;
+}
+
+.tool-bar .tool-bar-wrapper div img{
+  height: 20px;
+  width: 20px;
 }

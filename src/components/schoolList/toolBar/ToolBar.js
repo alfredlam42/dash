@@ -7,22 +7,46 @@ import FontAwesome from 'react-fontawesome';
 import './ToolBar.css';
 
 // Helpers
+import getCities from '../../../assets/js/getCities';
+
+// Images
+var edit = require('../../../assets/img/edit.png');
+var sort = require('../../../assets/img/sort.png');
 
 class Toolbar extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      cities: [],
+    }
+  }
+
+  componentWillMount(){
+    var cities = getCities();
+
+    this.setState({cities: cities});
+  }
+
+  renderCityOptions(){
+    var cities = this.state.cities;
+
+    return cities.map(function(city){
+      return <option key={city} value={city}>{city}</option>;
+    })
+  }
+
   render(){
     return(
       <div className="tool-bar">
         <div className="tool-bar-wrapper">
-          <div className="filter"><FontAwesome name="filter" /></div>
           <div className="city">
             <select>
-              <option value="Tripoli, Lebanon">Tripoli, Lebanon</option>
-              <option value="Akkar, Lebanon">Akkar, Lebanon</option>
-              <option value="Bekaa Valley, Lebanon">Bekaa Valley, Lebanon</option>
-              <option value="Mount Lebanon, Lebanon">Mount Lebanon, Lebanon</option>
-              <option value="Beirut, Lebanon">Beirut, Lebanon</option>
+              <option value="default">Select a city...</option>
+              {this.renderCityOptions()}
             </select>
           </div>
+          <div className="write-review"><img src={edit} alt="write a review" /></div>
+          <div className="filter"><img src={sort} alt="filter or sort results" /></div>
         </div>
       </div>
     )
