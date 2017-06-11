@@ -126,7 +126,7 @@ class ReviewPage extends Component {
           <div className="title">Review School</div>
           <form onSubmit={this._onSubmit}>
             <div className="city-select">
-              <div className="text">I got to school in</div>
+              <div className="text">I go to school in</div>
               <select onChange={this._onCityChange}>
                 <option value="defaultCity">Select A City</option>
                 {this.renderCityOptions()}
@@ -159,9 +159,9 @@ class ReviewPage extends Component {
             </div>
             <div className="ratings-section">
               <div className="title">Please rate your school based upon the following criteria:</div>
-              <div className="question">Bullying often affects.</div>
+              <div className="question">Bullying often affects at school.</div>
               <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="bullying" />
-              <div className="question">Sexual harassment often affects me.</div>
+              <div className="question">Sexual harassment often affects me at school.</div>
               <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="sexualHarassment" />
               <div className="question">I have access to sanitation facilities at school.</div>
               <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="sanitation" />

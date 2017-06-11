@@ -7,7 +7,7 @@ div.community {
   background-color: #f6f6f6
 }
 
-.community .community-wrapper div.title {
+.community .community-wrapper>div.title {
   display: flex;
   align-items: center;
   justify-content: center;

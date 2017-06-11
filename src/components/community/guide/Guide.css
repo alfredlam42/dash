@@ -1,0 +1,29 @@
+div.guide {
+  flex: 1;
+  margin: 2px 0;
+}
+
+.guide div.guide-wrapper {
+  height: 100%;
+  background-color: #ffffff;
+  padding: 12px 22px;
+  box-sizing: border-box;
+}
+
+.guide .guide-wrapper div.title {
+  height: 22px;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+}
+
+.guide .guide-wrapper div.desc {
+  font-family: Helvetica;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+}
