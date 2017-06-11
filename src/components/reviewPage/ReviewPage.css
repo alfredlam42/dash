@@ -17,7 +17,7 @@ div.review-page {
   align-items: center;
   justify-content: center;
   height: 60px;
-  background-color: #ffbd8f;
+  background-color: #2d9cf5;
   font-family: Helvetica;
   font-size: 18px;
   font-weight: 600;
@@ -140,7 +140,7 @@ div.review-page {
 }
 
 .review-page .review-page-wrapper form button {
-  background-color: #15a1c3;
+  background-color: #2d9cf5;
   color: #ffffff;
   border: 0;
   height: 35px;
