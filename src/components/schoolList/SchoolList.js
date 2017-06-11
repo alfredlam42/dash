@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Components
 import ToolBar from './toolBar/ToolBar';
@@ -8,23 +9,53 @@ import School from './school/School';
 import './SchoolList.css';
 
 // Helpers
+import getSchools from '../../assets/js/getSchools';
 
 // Images
 
 class SchoolList extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      city: 'default',
+      schools: [],
+    }
+
+    this._onCityChange = this._onCityChange.bind(this);
+  }
+
+  componentWillMount(){
+    var city = localStorage.getItem('city');
+    var schools = getSchools(city);
+
+    this.setState({city: city, schools: schools});
+  }
+
+  renderSchools(){
+    var schools = this.state.schools;
+
+    return schools.map(function(school, index){
+      return <Link key={index} to="/schools/analytics"><School schoolName={`${school}`} rating={Math.floor(Math.random() * 5)} /></Link>
+    })
+  }
+
+  _onCityChange(event){
+    var city = event.target.value;
+    var schools = getSchools(city);
+
+    this.setState({city: city, schools: schools});
+  }
+
   render(){
+    var city = this.state.city;
+
     return(
       <div className="school-list">
         <div className="school-list-wrapper">
           <div className="title">Schools</div>
-          <ToolBar />
+          <ToolBar city={city} onCityChange={this._onCityChange}/>
           <div className="list">
-            <School schoolName="School 1" rating={1} />
-            <School schoolName="School 2" rating={3} />
-            <School schoolName="School 3" rating={3} />
-            <School schoolName="School 4" rating={3} />
-            <School schoolName="School 5" rating={3} />
-            <School schoolName="School 6" rating={3} />
+            {this.renderSchools()}
           </div>
         </div>
       </div>

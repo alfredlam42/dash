@@ -19,3 +19,7 @@ div.school-list{
   text-align: left;
   color: #ffffff;
 }
+
+.school-list .school-list-wrapper .list a {
+  text-decoration: none;
+}
