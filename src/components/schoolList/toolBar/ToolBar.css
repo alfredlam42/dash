@@ -1,0 +1,22 @@
+div.tool-bar {
+  height: 25px;
+}
+
+.tool-bar div.tool-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.tool-bar .tool-bar-wrapper>div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.tool-bar .tool-bar-wrapper div.selection {
+  font-family: Helvetica;
+}

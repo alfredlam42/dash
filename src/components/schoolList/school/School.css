@@ -1,0 +1,27 @@
+div.school {
+  height: 75px;
+}
+
+div.school:not(:last-of-type){
+  border: 1px solid #ffffff;
+}
+
+.school div.school-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background-color: #f6f6f6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.school .school-wrapper div.school-name {
+  flex: 7;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.school .school-wrapper div.rating {
+  flex: 3;
+}
