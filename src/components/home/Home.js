@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Components
 
@@ -30,20 +31,30 @@ class Home extends Component {
     })
   }
 
+  _onChange(event){
+    var city = event.target.value;
+
+    localStorage.setItem("city", city);
+  }
+
+  _onSubmit(event){
+    event.preventDefault();
+  }
+
   render(){
     return (
       <div className="home">
         <div className="home-wrapper">
           <div className="title">School Review</div>
-          <form>
+          <form onSubmit={this._onSubmit}>
             <div className="location">
               I live in
-              <select>
+              <select onChange={this._onChange}>
                 <option value="defaultCity">Select a city</option>
                 {this.renderCityOptions()};
               </select>
             </div>
-            <button className="view-school-button">View Schools</button>
+            <Link to="/schools"><button className="view-school-button">View Schools</button></Link>
           </form>
         </div>
       </div>
