@@ -36,6 +36,7 @@ constructor(props){
       <div className="discussions">
         <div className="discussions-wrapper">
           {this.renderDiscussions()}
+          <div className="add-discussion">Create New Post</div>
         </div>
       </div>
     )
