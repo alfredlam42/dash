@@ -10,7 +10,7 @@ import './Nav.css';
 
 // Images
 var school = require('../../assets/img/school.png');
-var review = require('../../assets/img/review.png');
+var review = require('../../assets/img/edit.png');
 var community = require('../../assets/img/community.png');
 var report = require('../../assets/img/report.png');
 var settings = require('../../assets/img/settings.png');
