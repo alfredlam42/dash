@@ -50,6 +50,8 @@ div.review-page {
   letter-spacing: 0.2px;
   text-align: left;
   color: #191919;
+  display: flex;
+  justify-content: space-between;
 }
 
 .review-page .review-page-wrapper form .city-select div.text:last-of-type{
