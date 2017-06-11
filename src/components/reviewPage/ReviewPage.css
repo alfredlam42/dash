@@ -1,0 +1,89 @@
+div.review-page {
+}
+
+.review-page div.review-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.review-page .review-page-wrapper>div.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  font-size: 36px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.review-page .review-page-wrapper form {
+  background-color: #f6f6f6;
+  padding: 0 6px;
+}
+
+.review-page .review-page-wrapper form>div{
+  margin: 4px 0;
+}
+
+.review-page .review-page-wrapper form>div select {
+  border: 1px solid black;
+  width: 200px;
+  height: 24px;
+}
+
+.review-page .review-page-wrapper form div.checkbox-section{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.review-page .review-page-wrapper form .ratings-section>div.title {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.review-page .review-page-wrapper form .ratings-section div.question {
+  margin: 20px 0 5px 0;
+}
+
+.review-page .review-page-wrapper form .additional-comments div.comment-title {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.review-page .review-page-wrapper form .additional-comments .comment-input textarea {
+  height: 90px;
+  width: calc(100% - 6px);
+  resize: none;
+}
+
+.review-page .review-page-wrapper form div.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.review-page .review-page-wrapper form .submitButton button {
+  background-color: #3388ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  height: 48px;
+  width: 240px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+}

@@ -1,0 +1,19 @@
+div.rating-question {
+  display: flex;
+  flex-direction: row;
+}
+
+.rating-question div.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.rating-question .option div.radio-value {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: Helvetica;
+  font-size: 10px;
+}
