@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
+import Nav from './components/nav/Nav';
 
 // Assets
 
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.props.children}
+        <Nav />
       </div>
     );
   }
