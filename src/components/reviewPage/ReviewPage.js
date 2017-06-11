@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { RadioGroup, Radio, FormField, Checkbox } from 'react-mdc-web';
 
 // Components
@@ -84,13 +83,16 @@ class ReviewPage extends Component {
     var gender = event.target.value;
     var formData = this.state.formData;
     formData.gender = gender;
+    formData.femaleParent = false;
+    formData.maleParent = false;
 
     this.setState({formData: formData});
   }
 
-  _onParentSelect(gender){
+  _onParentSelect(genderParent){
     var formData = this.state.formData;
-    formData[gender] = !formData[gender];
+    formData[genderParent] = !formData[genderParent];
+    formData.gender = null;
 
     this.setState({formData: formData});
   }
@@ -104,10 +106,20 @@ class ReviewPage extends Component {
 
   _onSubmit(event){
     event.preventDefault();
+
+    var formData = this.state.formData;
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+    window.location.href = 'http://localhost:3000/schools';
   }
 
 
   render(){
+    var formData = this.state.formData;
+    var femaleParent = formData.femaleParent;
+    var maleParent = formData.maleParent;
+    var gender = formData.gender;
+
     return(
       <div className="review-page">
         <div className="review-page-wrapper">
@@ -128,6 +140,7 @@ class ReviewPage extends Component {
             <div className="checkbox-section">
               <RadioGroup
                 name="person-type"
+                value={gender}
                 onChange={this._onGenderChange}
               >
                 <Radio value="female">I am a female student</Radio>
@@ -135,11 +148,11 @@ class ReviewPage extends Component {
               </RadioGroup>
               <FormField id="labeled-checkbox">
                 <div>
-                  <Checkbox onChange={() => {this._onParentSelect('femaleParent')}}/>
+                  <Checkbox checked={femaleParent} onChange={() => {this._onParentSelect('femaleParent')}}/>
                   <label>I am the parent of a female student</label>
                 </div>
                 <div>
-                  <Checkbox onChange={() => {this._onParentSelect('maleParent')}}/>
+                  <Checkbox checked={maleParent} onChange={() => {this._onParentSelect('maleParent')}}/>
                   <label>I am the parent of a male student</label>
                 </div>
               </FormField>
@@ -163,7 +176,7 @@ class ReviewPage extends Component {
               <div className="comment-title">Comments:</div>
               <div className="comment-input"><textarea name="comments" /></div>
             </div>
-              <Link to="/schools"><button>Submit</button></Link>
+              <button>Submit</button>
           </form>
         </div>
       </div>
