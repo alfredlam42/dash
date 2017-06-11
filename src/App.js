@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Nav from './components/nav/Nav';
 
 // Assets
+import 'material-components-web/dist/material-components-web.min.css';
 
 // CSS
 import './App.css';
