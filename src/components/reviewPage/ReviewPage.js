@@ -18,12 +18,26 @@ class ReviewPage extends Component {
     this.state = {
       cities: [],
       schools: [],
-      selectedCity: null,
-      selectedSchool: null,
+      formData: {
+        selectedCity: null,
+        selectedSchool: null,
+        gender: null,
+        femaleParent: false,
+        maleParent: false,
+        bullying: 0,
+        sexualHarassment: 0,
+        sanitation: 0,
+        classSize: 0,
+        languageBarrier: 0,
+        enrollment: 0
+      }
     }
 
     this._onCityChange = this._onCityChange.bind(this);
     this._onSchoolChange = this._onSchoolChange.bind(this);
+    this._onGenderChange = this._onGenderChange.bind(this);
+    this._onParentSelect = this._onParentSelect.bind(this);
+    this._onQuestionChange = this._onQuestionChange.bind(this);
     this._onSubmit = this._onSubmit.bind(this);
   }
 
@@ -52,14 +66,40 @@ class ReviewPage extends Component {
   _onCityChange(event){
     var selectedCity = event.target.value;
     var schools = getSchools(selectedCity);
+    var formData = this.state.formData;
+    formData.selectedCity = selectedCity;
 
-    this.setState({selectedCity: selectedCity, schools: schools});
+    this.setState({formData: formData, schools: schools});
   }
 
   _onSchoolChange(event){
     var selectedSchool = event.target.value;
+    var formData = this.state.formData;
+    formData.selectedSchool = selectedSchool;
 
-    this.setState({selectedSchool: selectedSchool});
+    this.setState({formData: formData});
+  }
+
+  _onGenderChange(event){
+    var gender = event.target.value;
+    var formData = this.state.formData;
+    formData.gender = gender;
+
+    this.setState({formData: formData});
+  }
+
+  _onParentSelect(gender){
+    var formData = this.state.formData;
+    formData[gender] = !formData[gender];
+
+    this.setState({formData: formData});
+  }
+
+  _onQuestionChange(questionName, answer){
+    var formData = this.state.formData;
+    formData[questionName] = parseInt(answer);
+
+    this.setState({formData: formData}, () => {console.log(this.state)});
   }
 
   _onSubmit(event){
@@ -88,17 +128,18 @@ class ReviewPage extends Component {
             <div className="checkbox-section">
               <RadioGroup
                 name="person-type"
+                onChange={this._onGenderChange}
               >
                 <Radio value="female">I am a female student</Radio>
                 <Radio value="male">I am a male student</Radio>
               </RadioGroup>
               <FormField id="labeled-checkbox">
                 <div>
-                  <Checkbox />
+                  <Checkbox onChange={() => {this._onParentSelect('femaleParent')}}/>
                   <label>I am the parent of a female student</label>
                 </div>
                 <div>
-                  <Checkbox />
+                  <Checkbox onChange={() => {this._onParentSelect('maleParent')}}/>
                   <label>I am the parent of a male student</label>
                 </div>
               </FormField>
@@ -106,17 +147,17 @@ class ReviewPage extends Component {
             <div className="ratings-section">
               <div className="title">Please rate your school based upon the following criteria:</div>
               <div className="question">Bullying often affects.</div>
-              <RatingQuestion questionName="q1" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="bullying" />
               <div className="question">Sexual harassment often affects me.</div>
-              <RatingQuestion questionName="q2" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="sexualHarassment" />
               <div className="question">I have access to sanitation facilities at school.</div>
-              <RatingQuestion questionName="q3" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="sanitation" />
               <div className="question">There is enough space for everyone in my classroom.</div>
-              <RatingQuestion questionName="q4" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="classSize" />
               <div className="question">I encounter language barriers during class.</div>
-              <RatingQuestion questionName="q5" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="languageBarrier" />
               <div className="question">My enrollment at this school was handled fairly.</div>
-              <RatingQuestion questionName="q6" />
+              <RatingQuestion onQuestionChange={this._onQuestionChange} questionName="enrollment" />
             </div>
             <div className="additional-comments">
               <div className="comment-title">Comments:</div>
