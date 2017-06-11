@@ -12,8 +12,8 @@ div.rating-question {
 
 .rating-question .option div.radio-value {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   font-family: Helvetica;
   font-size: 10px;
 }

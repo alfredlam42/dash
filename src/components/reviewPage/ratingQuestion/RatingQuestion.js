@@ -19,7 +19,6 @@ class RatingQuestion extends Component {
         </div>
         <div className="option">
           <div className="radio-button"><input type="radio" name={questionName} value="2" /></div>
-          <div className="radio-value">Disagree</div>
         </div>
         <div className="option">
           <div className="radio-button"><input type="radio" name={questionName} value="3" /></div>
@@ -27,7 +26,6 @@ class RatingQuestion extends Component {
         </div>
         <div className="option">
           <div className="radio-button"><input type="radio" name={questionName} value="4" /></div>
-          <div className="radio-value">Agree</div>
         </div>
         <div className="option">
           <div className="radio-button"><input type="radio" name={questionName} value="5" /></div>
