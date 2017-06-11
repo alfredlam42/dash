@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
 
 // Components
 
@@ -36,11 +35,13 @@ class Toolbar extends Component {
   }
 
   render(){
+    var city = this.props.city;
+
     return(
       <div className="tool-bar">
         <div className="tool-bar-wrapper">
           <div className="city">
-            <select>
+            <select onChange={this.props.onCityChange} value={city}>
               <option value="default">Select a city...</option>
               {this.renderCityOptions()}
             </select>
