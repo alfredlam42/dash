@@ -9,6 +9,7 @@ import Home from './components/home/Home';
 import SchoolList from './components/schoolList/SchoolList';
 import ReviewPage from './components/reviewPage/ReviewPage';
 import SchoolAnalytic from './components/schoolAnalytic/SchoolAnalytic';
+import Community from './components/community/Community';
 
 // Helpers
 import registerServiceWorker from './registerServiceWorker';
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="/schools" component={SchoolList} />
       <Route path="/schools/review" component={ReviewPage} />
       <Route path="/schools/analytics" component={SchoolAnalytic} />
+      <Route path="/community" component={Community} />
     </Route>
   </Router>,
   document.getElementById('root')

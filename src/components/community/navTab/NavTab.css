@@ -1,0 +1,25 @@
+div.nav-tab {
+  height: 42px;
+  background-color: #f6f6f6;
+  margin: 2px 0;
+}
+
+.nav-tab div.nav-tab-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: #ffffff;
+
+}
+
+.nav-tab .nav-tab-wrapper div.tabSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #191919;
+}

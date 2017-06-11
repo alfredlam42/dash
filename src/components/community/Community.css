@@ -1,0 +1,22 @@
+div.community {
+  height: 100%;
+}
+
+.community div.community-wrapper {
+  height: 100%;
+  background-color: #f6f6f6
+}
+
+.community .community-wrapper div.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #2d9cf5;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #ffffff;
+}

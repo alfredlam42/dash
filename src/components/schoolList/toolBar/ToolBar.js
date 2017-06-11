@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 // Components
 
@@ -46,7 +47,7 @@ class Toolbar extends Component {
               {this.renderCityOptions()}
             </select>
           </div>
-          <div className="write-review"><img src={edit} alt="write a review" /></div>
+          <div className="write-review"><Link to="/schools/review"><img src={edit} alt="write a review" /></Link></div>
           <div className="filter"><img src={sort} alt="filter or sort results" /></div>
         </div>
       </div>
