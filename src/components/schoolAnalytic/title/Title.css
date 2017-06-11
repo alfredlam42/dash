@@ -1,0 +1,13 @@
+div.title {
+  height: 60px;
+  background-color: #ffbd8f;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #ffffff;
+  padding-top: 11px;
+  padding-left: 23px;
+  box-sizing: border-box;
+}
