@@ -23,7 +23,7 @@ ReactDOM.render(
       <IndexRoute component={Home} />
       <Route path="/schools" component={SchoolList} />
       <Route path="/schools/review" component={ReviewPage} />
-      <Route path="/schools/analytics" component={SchoolAnalytic} />
+      <Route path="/schools/analytics/:schoolName" component={SchoolAnalytic} />
       <Route path="/community" component={Community} />
     </Route>
   </Router>,
