@@ -1,4 +1,5 @@
 div.review-page {
+
 }
 
 .review-page div.review-page-wrapper {
@@ -8,25 +9,51 @@ div.review-page {
   top: 0;
   bottom: 0;
   overflow-y: auto;
+  background-size: #f6f6f6;
 }
 
 .review-page .review-page-wrapper>div.title {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
-  font-size: 36px;
+  height: 60px;
+  background-color: #ffbd8f;
   font-family: Helvetica;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .review-page .review-page-wrapper form {
   background-color: #f6f6f6;
-  padding: 0 6px;
 }
 
 .review-page .review-page-wrapper form>div{
-  margin: 4px 0;
+  margin: 2px 0;
+  background-color: #ffffff
+}
+
+.review-page .review-page-wrapper form div.city-select{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px 22px 18px 22px;
+  box-sizing: border-box;
+}
+
+.review-page .review-page-wrapper form .city-select div.text{
+  margin-bottom: 14px;
+  font-family: Helvetica;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+}
+
+.review-page .review-page-wrapper form .city-select div.text:last-of-type{
+  margin-top: 10px;
 }
 
 .review-page .review-page-wrapper form>div select {
@@ -36,54 +63,92 @@ div.review-page {
 }
 
 .review-page .review-page-wrapper form div.checkbox-section{
+  padding: 16px 22px 20px 22px;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+}
+
+.review-page .review-page-wrapper form .checkbox-section>div.mdc-form-field {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  align-items: flex-start;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.review-page .review-page-wrapper form .checkbox-section>div.mdc-form-field>div#labeled-checkbox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+.review-page .review-page-wrapper form .ratings-section {
+  padding: 18px 22px;
+  box-sizing: border-box;
 }
 
 .review-page .review-page-wrapper form .ratings-section>div.title {
   display: flex;
   align-items: center;
-  height: 70px;
   font-family: Helvetica;
-  font-weight: bold;
   font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
 }
 
 .review-page .review-page-wrapper form .ratings-section div.question {
-  margin: 20px 0 5px 0;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+  margin: 18px 0;
+}
+
+.review-page .review-page-wrapper form .additional-comments {
+  padding: 18px 22px 26px 18px;
+  box-sizing: border-box;
 }
 
 .review-page .review-page-wrapper form .additional-comments div.comment-title {
   display: flex;
   align-items: center;
-  height: 70px;
   font-family: Helvetica;
   font-weight: bold;
   font-size: 16px;
+  margin-bottom: 12px;
 }
 
 .review-page .review-page-wrapper form .additional-comments .comment-input textarea {
   height: 90px;
   width: calc(100% - 6px);
   resize: none;
+  border: solid 1px #15a1c3;
 }
 
 .review-page .review-page-wrapper form div.submitButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
 }
 
-.review-page .review-page-wrapper form .submitButton button {
-  background-color: #3388ff;
+.review-page .review-page-wrapper form button {
+  background-color: #15a1c3;
   color: #ffffff;
   border: 0;
-  border-radius: 5px;
-  height: 48px;
-  width: 240px;
+  height: 35px;
+  width: 100%;
   font-family: Helvetica;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
 }

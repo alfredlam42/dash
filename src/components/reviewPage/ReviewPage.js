@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { RadioGroup, Radio, FormField, Checkbox } from 'react-mdc-web';
 
 // Components
 import RatingQuestion from './ratingQuestion/RatingQuestion';
@@ -73,30 +74,40 @@ class ReviewPage extends Component {
           <div className="title">Review School</div>
           <form onSubmit={this._onSubmit}>
             <div className="city-select">
+              <div className="text">I got to school in</div>
               <select onChange={this._onCityChange}>
                 <option value="defaultCity">Select A City</option>
                 {this.renderCityOptions()}
               </select>
-            </div>
-            <div className="school-select">
+              <div className="text">at</div>
               <select onChange={this._onSchoolChange}>
                 <option value="defaultSchool">Select A School</option>
                 {this.renderSchoolOptions()}
               </select>
             </div>
             <div className="checkbox-section">
-              <div>
-                <input type="checkbox" value="female" />I am a female student (or parent of a female student)
-              </div>
-              <div>
-                <input type="checkbox" value="male" />I am a male student (or parent of a male student)
-              </div>
+              <RadioGroup
+                name="person-type"
+              >
+                <Radio value="female">I am a female student</Radio>
+                <Radio value="male">I am a male student</Radio>
+              </RadioGroup>
+              <FormField id="labeled-checkbox">
+                <div>
+                  <Checkbox />
+                  <label>I am the parent of a female student</label>
+                </div>
+                <div>
+                  <Checkbox />
+                  <label>I am the parent of a male student</label>
+                </div>
+              </FormField>
             </div>
             <div className="ratings-section">
               <div className="title">Please rate your school based upon the following criteria:</div>
-              <div className="question">Bullying often affects me at school.</div>
+              <div className="question">Bullying often affects.</div>
               <RatingQuestion questionName="q1" />
-              <div className="question">Sexual harassment often affects me at school.</div>
+              <div className="question">Sexual harassment often affects me.</div>
               <RatingQuestion questionName="q2" />
               <div className="question">I have access to sanitation facilities at school.</div>
               <RatingQuestion questionName="q3" />
@@ -111,9 +122,7 @@ class ReviewPage extends Component {
               <div className="comment-title">Comments:</div>
               <div className="comment-input"><textarea name="comments" /></div>
             </div>
-            <div className="submitButton">
               <Link to="/schools"><button>Submit</button></Link>
-            </div>
           </form>
         </div>
       </div>
