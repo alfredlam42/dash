@@ -23,7 +23,7 @@ class Nav extends Component {
             <img src={school} alt="schools icon" />
             School
           </div></Link>
-          <Link to="/reviews"><div className="link">
+          <Link to="/schools/review"><div className="link">
             <img src={review} alt="review icon" />
             Review
           </div></Link>
