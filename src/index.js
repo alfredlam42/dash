@@ -8,6 +8,7 @@ import App from './App';
 import Home from './components/home/Home';
 import SchoolList from './components/schoolList/SchoolList';
 import ReviewPage from './components/reviewPage/ReviewPage';
+import SchoolAnalytic from './components/schoolAnalytic/SchoolAnalytic';
 
 // Helpers
 import registerServiceWorker from './registerServiceWorker';
@@ -21,6 +22,7 @@ ReactDOM.render(
       <IndexRoute component={Home} />
       <Route path="/schools" component={SchoolList} />
       <Route path="/schools/review" component={ReviewPage} />
+      <Route path="/schools/analytics" component={SchoolAnalytic} />
     </Route>
   </Router>,
   document.getElementById('root')
