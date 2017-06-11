@@ -97,7 +97,7 @@ class ReviewPage extends Component {
 
   _onQuestionChange(questionName, answer){
     var formData = this.state.formData;
-    formData[questionName] = parseInt(answer);
+    formData[questionName] = parseInt(answer, 10);
 
     this.setState({formData: formData}, () => {console.log(this.state)});
   }
