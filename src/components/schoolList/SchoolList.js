@@ -33,9 +33,9 @@ class SchoolList extends Component {
 
   renderSchools(){
     var schools = this.state.schools;
-    var rating = Math.floor(Math.random() * 5);
 
     return schools.map(function(school, index){
+      var rating = Math.floor(Math.random() * 5);
       var schoolLink = school.replace(/\s/g, '-')
 
       return <Link key={index} to={`/schools/analytics/${schoolLink}`}><School schoolName={school} rating={rating} /></Link>
