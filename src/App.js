@@ -10,6 +10,10 @@ import 'material-components-web/dist/material-components-web.min.css';
 import './App.css';
 
 class App extends Component {
+  componentWillMount(){
+    localStorage.setItem("city", 'Tripoli, Lebanon');
+  }
+
   render() {
     return (
       <div className="App">
