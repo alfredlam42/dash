@@ -20,6 +20,7 @@ class Home extends Component {
   componentWillMount(){
     var cities = getCities();
 
+    localStorage.setItem("city", 'Tripoli, Lebanon');
     this.setState({cities: cities});
   }
 
