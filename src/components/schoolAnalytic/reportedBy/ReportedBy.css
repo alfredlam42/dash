@@ -1,0 +1,17 @@
+div.reported-by {
+  padding: 10px 22px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reported-by div.reported-by-title {
+  font-family: Helvetica;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #191919;
+}
+
+.reported-by canvas {
+  margin-top: 12px;
+}
