@@ -14,7 +14,6 @@ div.school {
 }
 
 .school .school-wrapper div.school-name {
-  flex: 7;
   font-family: Helvetica;
   font-size: 16px;
   letter-spacing: 0.4px;
@@ -23,6 +22,8 @@ div.school {
 }
 
 .school .school-wrapper div.rating {
-  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
   font-size: 20px;
 }
